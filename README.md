@@ -13,6 +13,7 @@
 
 * Clicking on a result will open the respective folder using the default File Manager (Ex: nautilus)
 * Pressing ```ctrl+T``` on a result item will open the respective folder on a Terminal window.
+* Pressing ```ctrl+E``` on a result item will open the respective folder in VScode.
 
 
 ## Related

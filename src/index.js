@@ -6,7 +6,6 @@ const iconFolder = require('../assets/icon-folder.png');
 const PLUGIN_REGEX = /goto\s(.*)/;
 const PLUGIN_KEYWORD = 'goto';
 const exec = require('child_process').exec;
-
 const TrackerService = require('./trackerService');
 
 const plugin = ({ term, display, actions, settings, hide }) => {
@@ -49,8 +48,18 @@ const plugin = ({ term, display, actions, settings, hide }) => {
             });
           },
           onKeyDown: (event) => {
+
+            // ctrl + T - Open new terminal window in the specified folder
             if (event.ctrlKey && event.keyCode === 84) {
               let cmd = `x-terminal-emulator --working-directory ${result.normalizedPath}`;
+              exec(cmd, (err) => {
+                console.log(err);
+              });
+            }
+
+              // ctrl + E - Open the specified folder in VScode
+            if (event.ctrlKey && event.keyCode === 69) {
+              let cmd = `code ${result.normalizedPath}`;
               exec(cmd, (err) => {
                 console.log(err);
               });
