@@ -1,0 +1,32 @@
+{
+  "name": "cerebro-goto-folder-linux",
+  "description": "Cerebro plugin for quickly searching and opening folders using Tracker as search engine",
+  "version": "0.1.0",
+  "author": {
+    "name": "Bruno Paz",
+    "email": "brunopaz@sapo.pt",
+    "url": "http://brunopaz.net"
+  },
+  "repository": {
+    "url": "https://github.com/brpaz/cerebro-tracker"
+  },
+  "dependencies": {
+    "cerebro-tools": "^0.1.8",
+    "cerebro-ui": "^0.0.16",
+    "strip-ansi": "^4.0.0"
+  },
+  "devDependencies": {
+    "cerebro-scripts": "0.0.19"
+  },
+  "main": "dist/index.js",
+  "keywords": [
+    "cerebro",
+    "cerebro-plugin",
+    "tracker"
+  ],
+  "scripts": {
+    "start": "cerebro-scripts start",
+    "build": "cerebro-scripts build",
+    "test": "cerebro-scripts test"
+  }
+}
