@@ -16,8 +16,8 @@ const SEARCH_MEMOIZE_OPTIONS = {
 
 /**
  * Does a search on Tracker index.
- * @param {sring} term The search term
- * @param {object} options Tracker search options
+ * @param {String} term The search term
+ * @param {Object} options Tracker search options
  */
 const search = memoize((term, options = {}) => new Promise((resolve, reject) => {
 
@@ -50,8 +50,8 @@ const search = memoize((term, options = {}) => new Promise((resolve, reject) => 
 
 /**
  * Processes each lines returned by tracker output.
- * @param {string} line
- * @return {object}
+ * @param {String} line
+ * @return {Object}
  */
 const processLine = (line) => {
   line = stripAnsi(line).trim();
